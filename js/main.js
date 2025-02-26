@@ -121,11 +121,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "img/intro-bg.jpg",
     "img/intro-bg2.jpg",
     "img/intro-bg3.jpg",
-    "img/intro-bg4.jpg"
+    "img/intro-bg4.jpg",
   ];
 
   let currentIndex = 0;
   const introSection = document.querySelector(".intro");
+
+  introSection.style.backgroundImage = `url(${images[currentIndex]})`;
 
   setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
