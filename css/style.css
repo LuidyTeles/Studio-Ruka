@@ -100,26 +100,8 @@ hr {
 	border: 0;
 }
 
-.btn:active,
-.btn.active {
-	background-image: none;
-	outline: 0;
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-a:focus,
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus,
-.btn.focus,
-.btn:active.focus,
-.btn.active.focus {
-	outline: none;
-	outline-offset: none;
-}
-
-/* Estilo da seta para voltar ao topo */
+/* Seta de voltar para inicio */
+/* Estilo */
 .back-to-top {
 	position: fixed;
 	bottom: 20px;
@@ -136,21 +118,20 @@ a:focus,
 	z-index: 9999;
 }
 
+/* Exibir a cor */
 .back-to-top:hover {
 	background-color: #94ae44;
 }
 
-/* Exibir a seta quando o usuário rolar a página */
+/* Exibir quando o usuário rolar a página */
 .back-to-top.show {
 	display: block;
 }
 
-/* Navigation */
+/* Menu */
 #menu {
 	background-color: #fff;
-	/* Cor de fundo para a navbar fixa */
 	z-index: 1000;
-	/* Garante que a navbar ficará sobre outros elementos */
 }
 
 #menu.navbar-default {
@@ -181,8 +162,9 @@ a:focus,
 	color: #f5ecdb;
 }
 
+/* Barra quando está fora do menu */
 .on {
-	background-color: rgba(136, 140, 117, 0.5) !important;
+	background-color: rgba(76, 81, 58, 0.8) !important;
 	padding: 0 !important;
 	padding: 10px 0 !important;
 }
@@ -216,6 +198,8 @@ a:focus,
 	font-size: 18px;
 }
 
+/* Botões */
+/* Estilo / Posição */
 .btn-custom {
 	text-transform: uppercase;
 	color: #fff;
@@ -228,11 +212,12 @@ a:focus,
 	border-radius: 12px 0 12px 0;
 	transition: all 0.5s;
 	position: absolute;
-	bottom: -250px;
+	bottom: -400px;
 	left: 50%;
 	transform: translateX(-50%);
 }
 
+/* Crescer ao passar mouse em cima */
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom.focus,
@@ -243,12 +228,70 @@ a:focus,
 	transform: translateX(-50%) scale(1.1);
 }
 
+@media (max-width: 768px) {
+    .btn-custom {
+        position: fixed; /* Muda de absolute para fixed */
+        bottom: -120px; /* Ajuste para ficar acima do rodapé ou do header */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
+        padding: 12px 18px; /* Ajuste no padding */
+    }
+}
+
+/* Estilo / Posição */
+.btn-custom2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 0 3px #859c3c;
+	background-color: #4c513a;
+	border: 0;
+	padding: 14px 20px;
+	margin: 0;
+	font-size: 17px;
+	border-radius: 12px 0 12px 0;
+	transition: all 0.5s;
+	position: absolute;
+	left: 50%;
+	bottom: -100px;
+	transform: translateX(-50%);
+}
+
+/* Crescer ao passar mouse em cima */
+.btn-custom2:hover,
+.btn-custom2:focus,
+.btn-custom2.focus,
+.btn-custom2:active,
+.btn-custom2.active {
+	color: #859c3c;
+	background-color: #ffff;
+	transform: translateX(-50%) scale(1.1);
+}
+
+.btn:active,
+.btn.active {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+a:focus,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+	outline: none;
+	outline-offset: none;
+}
+
 /* Header Section */
 .intro {
 	display: table;
 	width: 100%;
 	height: 100vh;
-	/* Altura da tela */
 	padding: 0;
 	background: url(../img/intro-bg.jpg) no-repeat center bottom;
 	background-color: #e5e5e5;
@@ -257,12 +300,10 @@ a:focus,
 	background-size: cover;
 	-o-background-size: cover;
 	position: relative;
-	/* Para garantir que a sobreposição funcione bem */
 }
 
 .intro .overlay {
 	background: rgba(0, 0, 0, 0.40);
-	/* Sobreposição escura */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -304,7 +345,7 @@ a:focus,
 	margin-bottom: 40px;
 }
 
-/* About Section */
+/* Sobre Mim */
 #about {
 	padding: 120px 0;
 	background: #f6f6f6;
@@ -331,7 +372,7 @@ a:focus,
 	margin: 15px 0 30px;
 }
 
-/* Services Section */
+/* Serviços */
 #services {
 	padding: 120px 0;
 }
@@ -351,7 +392,7 @@ a:focus,
 	text-transform: uppercase;
 }
 
-/* Portfolio Section */
+/* Portifolio */
 #portfolio {
 	padding: 120px 0;
 	background: #f6f6f6;
@@ -402,7 +443,6 @@ ol.type li a:hover {
 
 .isotope,
 .isotope .isotope-item {
-	/* change duration value to whatever you like */
 	-webkit-transition-duration: 0.8s;
 	-moz-transition-duration: 0.8s;
 	transition-duration: 0.8s;
@@ -478,7 +518,7 @@ ol.type li a:hover {
 	opacity: 1;
 }
 
-/* Team Section */
+/* Time */
 #team {
 	color: #fff;
 	background: #a7c44c url(../img/team-bg.jpg) center top no-repeat;
@@ -526,7 +566,7 @@ ol.type li a:hover {
 	color: #fff;
 }
 
-/* Contact Section */
+/* Contatos */
 #contact {
 	padding: 120px 0 60px 0;
 	background: #F6F6F6;
@@ -612,7 +652,7 @@ label {
 	font-size: 16px;
 }
 
-/* Footer Section*/
+/* Redes Sociais */
 #footer {
 	background: #333;
 	padding: 50px 0 20px 0;
