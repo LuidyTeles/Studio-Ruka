@@ -100,17 +100,38 @@ function main() {
 }
 
 function toggleAnswer(answerId) {
-  var answerElement = document.getElementById('answer-' + answerId);
+  var answerElement = document.getElementById("answer-" + answerId);
   var questionElement = answerElement.previousElementSibling;
 
   // Alternar a visibilidade da resposta
-  if (answerElement.style.display === "none" || answerElement.style.display === "") {
-      answerElement.style.display = "block";
-      questionElement.classList.add('active');
+  if (
+    answerElement.style.display === "none" ||
+    answerElement.style.display === ""
+  ) {
+    answerElement.style.display = "block";
+    questionElement.classList.add("active");
   } else {
-      answerElement.style.display = "none";
-      questionElement.classList.remove('active');
+    answerElement.style.display = "none";
+    questionElement.classList.remove("active");
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = [
+    "img/intro-bg.jpg",
+    "img/intro-bg2.jpg",
+    "img/intro-bg3.jpg",
+    "img/intro-bg4.jpg",
+    "img/intro-bg5.jpg"
+  ];
+
+  let currentIndex = 0;
+  const introSection = document.querySelector(".intro");
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    introSection.style.backgroundImage = `url(${images[currentIndex]})`;
+  }, 5000);
+});
 
 main();

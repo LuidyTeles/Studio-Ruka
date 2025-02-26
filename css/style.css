@@ -304,6 +304,7 @@ a:focus,
 	background-size: cover;
 	-o-background-size: cover;
 	position: relative;
+	transition: background-image 1s ease-in-out;
 }
 
 .intro .overlay {
