@@ -384,6 +384,7 @@ a:focus,
 /* Serviços */
 #services {
 	padding: 120px 0;
+	text-align: center;
 }
 
 #services .service {

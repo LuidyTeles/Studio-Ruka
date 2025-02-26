@@ -121,8 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "img/intro-bg.jpg",
     "img/intro-bg2.jpg",
     "img/intro-bg3.jpg",
-    "img/intro-bg4.jpg",
-    "img/intro-bg5.jpg"
+    "img/intro-bg4.jpg"
   ];
 
   let currentIndex = 0;
@@ -131,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(() => {
     currentIndex = (currentIndex + 1) % images.length;
     introSection.style.backgroundImage = `url(${images[currentIndex]})`;
-  }, 5000);
+  }, 3000);
 });
 
 main();
