@@ -98,4 +98,19 @@ function main() {
     });
   })();
 }
+
+function toggleAnswer(answerId) {
+  var answerElement = document.getElementById('answer-' + answerId);
+  var questionElement = answerElement.previousElementSibling;
+
+  // Alternar a visibilidade da resposta
+  if (answerElement.style.display === "none" || answerElement.style.display === "") {
+      answerElement.style.display = "block";
+      questionElement.classList.add('active');
+  } else {
+      answerElement.style.display = "none";
+      questionElement.classList.remove('active');
+  }
+}
+
 main();

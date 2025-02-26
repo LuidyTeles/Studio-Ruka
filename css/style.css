@@ -229,14 +229,18 @@ hr {
 }
 
 @media (max-width: 768px) {
-    .btn-custom {
-        position: fixed; /* Muda de absolute para fixed */
-        bottom: -120px; /* Ajuste para ficar acima do rodapé ou do header */
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
-        padding: 12px 18px; /* Ajuste no padding */
-    }
+	.btn-custom {
+		position: fixed;
+		/* Muda de absolute para fixed */
+		bottom: -120px;
+		/* Ajuste para ficar acima do rodapé ou do header */
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 14px;
+		/* Tamanho da fonte menor em dispositivos móveis */
+		padding: 12px 18px;
+		/* Ajuste no padding */
+	}
 }
 
 /* Estilo / Posição */
@@ -363,8 +367,12 @@ a:focus,
 
 #about img {
 	display: inline-block;
-	border-radius: 100px 0 100px 0;
-	box-shadow: -15px 0 #4c513a;
+	transition: box-shadow 0.3s ease;
+}
+
+#about img:focus,
+#about img:hover {
+	box-shadow: 0 0 15px #4c513b;
 }
 
 #about p {
@@ -383,13 +391,75 @@ a:focus,
 
 #services img {
 	width: 300px;
-	border-radius: 75px 0 75px 0;
-	box-shadow: 15px 0 #4c513a;
+}
+
+#services img:focus,
+#services img:hover {
+	box-shadow: 0 0 15px #4c513b;
 }
 
 #services h3 {
 	padding: 10px 0;
 	text-transform: uppercase;
+}
+
+/* FAQ */
+
+#faq {
+	padding: 120px 0;
+	background: #f6f6f6;
+}
+
+.faq-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.faq-item {
+	background-color: #f5ecdb;
+	border-bottom: 1px solid #000;
+	/* Apenas borda inferior */
+}
+
+.faq-question {
+	cursor: pointer;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	/* Texto da pergunta em negrito */
+}
+
+.arrow {
+	font-size: 22px;
+	font-weight: bold;
+	margin-right: 10px;
+	transition: transform 0.3s ease;
+	display: inline-block;
+	color: #000 !important;
+}
+
+.faq-answer {
+	display: none;
+	padding: 10px;
+	background-color: #fff;
+	border-top: 1px solid #000;
+}
+
+.faq-question:hover {
+	background-color: #d7c6a1;
+}
+
+.faq-question h3 {
+	margin: 0;
+	font-weight: bold;
+	/* Texto em negrito */
+}
+
+/* Quando a resposta é exibida, a seta vira para cima */
+.faq-question.active .arrow {
+	transform: rotate(90deg);
+	/* Gira para baixo ao expandir */
 }
 
 /* Portifolio */
@@ -479,10 +549,6 @@ ol.type li a:hover {
 	position: relative;
 }
 
-.portfolio-item img {
-	border-radius: 0 50px 0 50px;
-}
-
 .hover-bg .hover-text {
 	position: absolute;
 	text-align: center;
@@ -494,7 +560,6 @@ ol.type li a:hover {
 	width: 100%;
 	opacity: 0;
 	transition: all 0.5s;
-	border-radius: 0 50px 0 50px;
 }
 
 .hover-bg .hover-text>h4 {
@@ -652,40 +717,104 @@ label {
 	font-size: 16px;
 }
 
-/* Redes Sociais */
-#footer {
+/* Direitos */
+#description {
 	background: #333;
 	padding: 50px 0 20px 0;
 }
 
-#footer .social {
+#description .social {
 	margin-bottom: 50px;
 }
 
-#footer .social ul li {
+#description .social ul li {
 	display: inline-block;
 	margin: 0 20px;
 }
 
-#footer .social i.fa {
+#description .social i.fa {
 	font-size: 26px;
 	padding: 4px;
 	color: #a7c44c;
 	transition: all 0.3s;
 }
 
-#footer .social i.fa:hover {
+#description .social i.fa:hover {
 	color: #eee;
 }
 
-#footer p {
+#description p {
 	font-size: 15px;
 }
 
-#footer a {
-	color: #999;
+#description a {
+	color: #333;
 }
 
-#footer a:hover {
+#description a:hover {
 	color: #a7c44c;
+}
+
+/* Icones APPS */
+.icons ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	/* Espaçamento entre os ícones */
+}
+
+.icons ul li {
+	display: inline-block;
+}
+
+.icons ul li a i {
+	font-size: 32px;
+	/* Aumenta o tamanho dos ícones */
+	color: #000;
+	/* Cor dos ícones, ajuste conforme necessário */
+	transition: transform 0.3s ease-in-out;
+}
+
+.icons ul li a i:hover {
+	transform: scale(1.2);
+	/* Efeito de zoom ao passar o mouse */
+}
+
+/* Cores personalizadas para cada Icones APPS */
+.icons ul li a .fa-whatsapp {
+	color: #25D366;
+	/* Verde do WhatsApp */
+}
+
+.icons ul li a .fa-instagram {
+	color: #E4405F;
+	/* Rosa do Instagram */
+}
+
+.icons ul li a .fa-facebook {
+	color: #1877F2;
+	/* Azul do Facebook */
+}
+
+.icons ul li a .fa-linkedin {
+	color: #0077B5;
+	/* Azul do LinkedIn */
+}
+
+.icons ul li a .fa-envelope {
+	color: #D44638;
+	/* Vermelho do Gmail */
+}
+
+.icons ul li a .fa-pinterest {
+	color: #BD081C;
+	/* Vermelho do Pinterest */
+}
+
+/* Linha abaixo */
+.section-title hr {
+	margin-top: 20px;
 }
