@@ -1,0 +1,107 @@
+/* Link de contato */
+.contact-link { 
+    font-size: 1.5em;
+    text-decoration: none; 
+}
+
+/* Container do menu */
+#nav-menu-container {
+    margin-top: -80px;
+}
+
+/* Icones dos APPS */
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-icons ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons ul li {
+    display: inline-block;
+}
+
+.social-icons ul li a {
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.social-icons ul li a:hover {
+    transform: scale(1.2);
+}
+
+/* Alterar a cor do ícone do WhatsApp */
+.fa-whatsapp {
+    color: #25D366 !important;
+}
+
+.fa-whatsapp:hover {
+    color: #128C7E !important;
+}
+
+/* Alterar a cor do ícone do Instagram */
+.fa-instagram {
+    color: #E4405F !important;
+}
+
+.fa-instagram:hover {
+    color: #C13584 !important;
+}
+
+/* Alterar a cor do ícone do Facebook */
+.fa-facebook {
+    color: #1877F2 !important;
+}
+
+.fa-facebook:hover {
+    color: #155D8E !important;
+}
+
+/* Alterar a cor do ícone de E-mail */
+.fa-envelope {
+    color: #D44638 !important;
+}
+
+.fa-envelope:hover {
+    color: #C1351D !important;
+}
+
+/* Alterar a cor do ícone do LinkedIn */
+.fa-linkedin {
+    color: #0077B5 !important;
+}
+
+.fa-linkedin:hover {
+    color: #005582 !important;
+}
+
+/* Contatos */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.separator {
+    color: white;
+    font-weight: bold;
+}
