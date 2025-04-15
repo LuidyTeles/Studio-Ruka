@@ -101,7 +101,6 @@ hr {
 }
 
 /* Seta de voltar para inicio */
-/* Estilo */
 .back-to-top {
 	position: fixed;
 	bottom: 20px;
@@ -118,12 +117,10 @@ hr {
 	z-index: 9999;
 }
 
-/* Exibir a cor */
 .back-to-top:hover {
 	background-color: #94ae44;
 }
 
-/* Exibir quando o usuário rolar a página */
 .back-to-top.show {
 	display: block;
 }
@@ -162,7 +159,7 @@ hr {
 	color: #f5ecdb;
 }
 
-/* Barra quando está fora do menu */
+/* Navbar */
 .on {
 	background-color: rgba(76, 81, 58, 0.8) !important;
 	padding: 0 !important;
@@ -199,7 +196,6 @@ hr {
 }
 
 /* Botões */
-/* Estilo / Posição */
 .btn-custom {
 	text-transform: uppercase;
 	color: #fff;
@@ -217,7 +213,6 @@ hr {
 	transform: translateX(-50%);
 }
 
-/* Crescer ao passar mouse em cima */
 .btn-custom:hover,
 .btn-custom:focus,
 .btn-custom.focus,
@@ -231,19 +226,15 @@ hr {
 @media (max-width: 768px) {
 	.btn-custom {
 		position: fixed;
-		/* Muda de absolute para fixed */
 		bottom: -120px;
-		/* Ajuste para ficar acima do rodapé ou do header */
 		left: 50%;
 		transform: translateX(-50%);
 		font-size: 14px;
-		/* Tamanho da fonte menor em dispositivos móveis */
 		padding: 12px 18px;
-		/* Ajuste no padding */
 	}
 }
 
-/* Estilo / Posição */
+/* Botões 2 */
 .btn-custom2 {
 	text-transform: uppercase;
 	color: #fff;
@@ -261,7 +252,6 @@ hr {
 	transform: translateX(-50%);
 }
 
-/* Crescer ao passar mouse em cima */
 .btn-custom2:hover,
 .btn-custom2:focus,
 .btn-custom2.focus,
@@ -291,7 +281,7 @@ a:focus,
 	outline-offset: none;
 }
 
-/* Header Section */
+/* Home */
 .intro {
 	display: table;
 	width: 100%;
@@ -406,7 +396,6 @@ a:focus,
 }
 
 /* FAQ */
-
 #faq {
 	padding: 120px 0;
 	background: #f6f6f6;
@@ -420,7 +409,6 @@ a:focus,
 .faq-item {
 	background-color: #f5ecdb;
 	border-bottom: 1px solid #000;
-	/* Apenas borda inferior */
 }
 
 .faq-question {
@@ -429,7 +417,6 @@ a:focus,
 	display: flex;
 	align-items: center;
 	font-weight: bold;
-	/* Texto da pergunta em negrito */
 }
 
 .arrow {
@@ -455,13 +442,11 @@ a:focus,
 .faq-question h3 {
 	margin: 0;
 	font-weight: bold;
-	/* Texto em negrito */
 }
 
 /* Quando a resposta é exibida, a seta vira para cima */
 .faq-question.active .arrow {
 	transform: rotate(90deg);
-	/* Gira para baixo ao expandir */
 }
 
 /* Portifolio */
@@ -765,7 +750,6 @@ label {
 	display: flex;
 	justify-content: center;
 	gap: 15px;
-	/* Espaçamento entre os ícones */
 }
 
 .icons ul li {
@@ -774,49 +758,39 @@ label {
 
 .icons ul li a i {
 	font-size: 32px;
-	/* Aumenta o tamanho dos ícones */
 	color: #000;
-	/* Cor dos ícones, ajuste conforme necessário */
 	transition: transform 0.3s ease-in-out;
 }
 
 .icons ul li a i:hover {
 	transform: scale(1.2);
-	/* Efeito de zoom ao passar o mouse */
 }
 
 /* Cores personalizadas para cada Icones APPS */
 .icons ul li a .fa-whatsapp {
 	color: #25D366;
-	/* Verde do WhatsApp */
 }
 
 .icons ul li a .fa-instagram {
 	color: #E4405F;
-	/* Rosa do Instagram */
 }
 
 .icons ul li a .fa-facebook {
 	color: #1877F2;
-	/* Azul do Facebook */
 }
 
 .icons ul li a .fa-linkedin {
 	color: #0077B5;
-	/* Azul do LinkedIn */
 }
 
 .icons ul li a .fa-envelope {
 	color: #D44638;
-	/* Vermelho do Gmail */
 }
 
 .icons ul li a .fa-pinterest {
 	color: #BD081C;
-	/* Vermelho do Pinterest */
 }
 
-/* Linha abaixo */
 .section-title hr {
 	margin-top: 20px;
 }
